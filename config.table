@@ -1,179 +1,274 @@
 {
-  ["tab_bar"]	= {
-      ["items"]	= {
-          [1]	= {
-              ["url"]	= "https://blog.huiki.xyz/post/wallpaper-hanser-01/" ;
-              ["name"]	= "" ;
-              } ;
-          } ;
+  ["colors"]	= {
+      ["顶栏部件触摸"]	= "#33ffffff" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["标签栏文本"]	= "#ff000000" ;
+      ["标签栏项目触摸"]	= "#33000000" ;
+      ["悬浮按钮"]	= "#ff7e593e" ;
+      ["状态栏"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["侧滑栏背景"]	= "#e3ffffff" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["标签栏滑动条"]	= "#ff7e593e" ;
+      ["进度条"]	= "#ff7e593e" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["顶栏"]	= "#ff7e593e" ;
+      } ;
+  ["global_js"]	= "<script src=\"/mskin/js/jquery.min.js\" type=\"text/javascript\"></script>\
+<script src=\"/mskin/js/jquery.cookie.js\" type=\"text/javascript\"></script>\
+<script type=\"text/javascript\">\
+        //<![CDATA[\
+        $(function(){\
+            var cookie_Nightmode = $.cookie( \"Nightmode\");\
+            if (cookie_Nightmode>0) {\
+                cover(brightness = cookie_Nightmode/10);\
+            }\
+        });\
+        function Nightmode_switch(size){\
+                var Nightmode = $.cookie( \"Nightmode\");\
+            if (Nightmode>0) {\
+                $.cookie( \"Nightmode\" , null , {path: \"/\"});\
+                cover(brightness = 0); //关闭夜间模式\
+                } else {\
+                $.cookie( \"Nightmode\" , size , {expires: 365,path: \"/\" });\
+                cover(brightness = $.cookie( \"Nightmode\")/10); //开启夜间模式\
+                }\
+        }\
+        function cover(brightness) {\
+            if (typeof(div) == 'undefined') {\
+                div = document.createElement('div');\
+                div.setAttri" ;
+  ["fltBtn"]	= {
+      ["显示"]	= false ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件\
+刷新网页()" ;
+      ["图标"]	= "" ;
       } ;
   ["switch"]	= {
-      ["显示状态栏"]	= true ;
       ["支持滑动页面"]	= true ;
       ["启用启动图"]	= true ;
       ["横屏"]	= false ;
+      ["显示状态栏"]	= true ;
       } ;
-  ["global_js"]	= "" ;
-  ["web_control"]	= {
-      [1]	= {
-          ["url"]	= "blog.huiki.xyz" ;
-          ["remove_element"]	= "navbar navbar-expand-lg," ;
-          ["js"]	= "" ;
-          } ;
+  ["web"]	= {
+      ["浏览器用户标识"]	= "默认" ;
+      ["网页沉浸"]	= false ;
+      ["启用进度条"]	= true ;
+      ["惰性加载"]	= true ;
+      ["支持打开外部应用"]	= true ;
+      ["启用长按菜单"]	= true ;
       } ;
   ["view_attribute"]	= {
       ["标签栏高度"]	= "25dp" ;
-      ["搜索栏圆角弧度"]	= "2dp" ;
-      ["侧滑栏宽度"]	= "240dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["顶栏标题"]	= "毛怪の宝库" ;
-      ["顶栏高度"]	= "40dp" ;
       ["标签栏滑动条高度"]	= "3dp" ;
+      ["顶栏高度"]	= "40dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      ["顶栏标题"]	= "毛怪の宝库" ;
       } ;
-  ["colors"]	= {
-      ["标签栏文本"]	= "#ff000000" ;
-      ["侧滑栏背景"]	= "#e3ffffff" ;
-      ["标签栏滑动条"]	= "#ff7e593e" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["进度条"]	= "#ff7e593e" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["顶栏部件触摸"]	= "#33ffffff" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["标签栏项目触摸"]	= "#33000000" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["悬浮按钮"]	= "#ff7e593e" ;
-      ["状态栏"]	= "#ffffffff" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["顶栏"]	= "#ff7e593e" ;
-      } ;
-  ["fltBtn"]	= {
-      ["图标"]	= "" ;
-      ["显示"]	= true ;
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件\
-刷新网页()" ;
-      } ;
-  ["sidebar"]	= {
-      ["启用顶部图片"]	= true ;
+  ["tab_bar"]	= {
       ["items"]	= {
           [1]	= {
-              ["name"]	= "天使吟唱" ;
-              ["onClick"]	= "进入子页面(\"天使吟唱\",{标题=\"天使吟唱\",链接=\"\"})" ;
-              ["icon"]	= "drawable/emoticon_devil.png" ;
-              } ;
-          [2]	= {
-              ["name"]	= "FM&直播" ;
-              ["onClick"]	= "进入子页面(\"FM&直播\",{标题=\"FM&直播\",链接=\"\"})" ;
-              ["icon"]	= "drawable/brightness_2.png" ;
-              } ;
-          [3]	= {
-              ["name"]	= "社区" ;
-              ["onClick"]	= "进入子页面(\"社区\",{标题=\"社区\",链接=\"\"})" ;
-              ["icon"]	= "drawable/nature_people.png" ;
-              } ;
-          [4]	= {
-              ["name"]	= "瞅瞅憨憨" ;
-              ["onClick"]	= "进入子页面(\"瞅瞅憨憨\",{标题=\"瞅瞅憨憨\",链接=\"\"})" ;
-              ["icon"]	= "drawable/account_box_outline.png" ;
-              } ;
-          [5]	= {
-              ["name"]	= "了解憨憨" ;
-              ["onClick"]	= "进入子页面(\"了解憨憨\")" ;
-              ["icon"]	= "drawable/account_alert.png" ;
-              } ;
-          [6]	= {
-              ["name"]	= "憨の壁纸收藏库" ;
-              ["onClick"]	= "进入子页面(\"憨の壁纸收藏库\",{标题=\"壁纸库\",链接=\"https://www.coolapk.com/picture/16103071?shareKey=NDRjNDcwZDE4NGNiNWYyMmExOWY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\"})" ;
-              ["icon"]	= "drawable/picture.png" ;
-              } ;
-          [7]	= {
-              ["name"]	= "作者的压箱资源" ;
-              ["onClick"]	= "加载网页(\"https://mayfly.lanzous.com/b015dww5e\")" ;
-              ["icon"]	= "drawable/dropbox.png" ;
-              } ;
-          [8]	= {
-              ["name"]	= "关于此软件" ;
-              ["onClick"]	= "对话框()\
-.设置标题(\"关于\")\
-.设置消息(\"此软件完全免费，不得用于买卖交易\\n更新时间从2.0开始为每周六早上10点更\\n此软件用Fusion App制作\\n联系方式：\\nQQ：2385646346\\n酷安：蜉蝣Mayfly\\n微博：蜉蝣fy_\")\
-.设置积极按钮(\"了解\")\
-.显示()" ;
-              ["icon"]	= "drawable/account_check.png" ;
-              } ;
-          [9]	= {
-              ["name"]	= "2.0版本更新说明" ;
-              ["onClick"]	= "对话框()\
-.设置标题(\"关于1.9版本\")\
-.设置消息(\"修改侧滑栏透明度\\n修改主页\\n添加了鱼吧\")\
-.设置积极按钮(\"了解\")\
-.显示()" ;
-              ["icon"]	= "drawable/worker.png" ;
-              } ;
-          [10]	= {
-              ["name"]	= "联系我们" ;
-              ["onClick"]	= "加QQ群(1128216585)" ;
-              ["icon"]	= "drawable/account_multiple_plus.png" ;
-              } ;
-          [11]	= {
-              ["name"]	= "更新地址" ;
-              ["onClick"]	= "加载网页(\"https://mayfly.lanzous.com/b015nisvc\")" ;
-              ["icon"]	= "drawable/arrow_down_bold_circle.png" ;
-              } ;
-          [12]	= {
-              ["name"]	= "分享该软件" ;
-              ["onClick"]	= "弹出消息(\"让更多毛怪知道吧~\")\
-分享文本(\"分享一个APP，毛怪の宝库，下载地址：https://mayfly.lanzous.com/b015nisvc\")" ;
-              ["icon"]	= "drawable/heart.png" ;
+              ["name"]	= "" ;
+              ["url"]	= "https://blog.huiki.xyz/post/wallpaper-hanser-01/" ;
               } ;
           } ;
-      ["启用"]	= true ;
+      } ;
+  ["toolbar"]	= {
+      ["输入栏模式"]	= false ;
+      ["启用搜索功能"]	= false ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          } ;
+      ["搜索框提示"]	= "输入关键词搜索.." ;
+      ["icon_btns"]	= {
+          } ;
+      ["搜索URL"]	= "" ;
       } ;
   ["events"]	= {
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
-\
---接收参数\
-浏览器对象,新标题=..." ;
       ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
 \
 --接收参数\
 浏览器对象,网页链接=..." ;
-      ["程序启动"]	= "泡沫对话框(199)\
-.设置标题(\"使用前\")\
-.设置消息([[本软件完全免费，请不要上当受骗~]])\
-.设置积极按钮(\"确定\",function()\
-  显示消息(\"点击了确定\")\
+      ["网页加载完毕"]	= "" ;
+      ["程序启动"]	= " local urla=\"http://www.iyuji.cn/iyuji/s/aXBlVkczRnBYNGpFVWU5V3hoaXg0dz09/1596974149403559\"\
+    canoffline=false\
+    packinfo=this.getPackageManager().getPackageInfo(this.getPackageName(),((32552732/2/2-8183)/10000-6-231)/9)\
+    Http.get(urla,nil,\"UTF-8\",nil,function(code,content,cookie,header)\
+      if(code==200 and content)then\
+        content=content:gsub(\"amp;\",\"\") or content;\
+        update=content:match(\"%{更新:(.-):END%}\")\
+        if(update)then\
+          newest=update:match(\"%【版本:(.-):END%】\")\
+          if(usevername)then\
+            version=tostring(packinfo.versionName)\
+          else\
+            version=tostring(packinfo.versionCode)\
+          end\
+          chglog=update:match(\"%【更新日志:(.-):END%】\")\
+          下载链接=content:match(\"【下载地址】(.-)【下载地址】\")\
+          if not((usevername and version==newest) or (not usevername and version>=newest))then\
+          对话框()\
+.设置标题(\"作者的小喇叭\")\
+.设置消息(\"\"..newest)\
+.设置积极按钮(\"搜嘎\",function()\
+  webView.getSettings().setUserAgentString(\"MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1\");\
 end)\
-.设置消极按钮(\"取消\")\
-.显示()" ;
-      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+.设置消极按钮(\"嗝\")\
+.显示()\
+          else \
+            return true\
+          end \
+        else\
+          return true \
+        end\
+      else\
+        if(code==-1)then\
+          弹出消息(\"兄dei，你没有联网呐\")\
+        else\
+          弹出消息(\"网络请求失败\"..\" \"..code)\
+        end\
+        end\
+    end)" ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
 \
 --接收参数\
-浏览器对象,网页链接=..." ;
+浏览器对象,新标题=..." ;
       } ;
-  ["web"]	= {
-      ["启用长按菜单"]	= true ;
-      ["网页沉浸"]	= false ;
-      ["惰性加载"]	= true ;
-      ["浏览器用户标识"]	= "默认" ;
-      ["启用进度条"]	= true ;
-      ["支持打开外部应用"]	= true ;
+  ["web_control"]	= {
+      [1]	= {
+          ["js"]	= "" ;
+          ["url"]	= "blog.huiki.xyz" ;
+          ["remove_element"]	= "navbar navbar-expand-lg," ;
+          } ;
       } ;
-  ["toolbar"]	= {
-      ["输入栏模式"]	= false ;
-      ["搜索框提示"]	= "输入关键词搜索.." ;
-      ["menus"]	= {
+  ["sidebar"]	= {
+      ["items"]	= {
           [1]	= {
-              ["name"]	= "退出" ;
-              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "天使吟唱" ;
+              ["icon"]	= "drawable/emoticon_devil.png" ;
+              ["onClick"]	= "进入子页面(\"天使吟唱\",{标题=\"天使吟唱\",链接=\"\"})" ;
+              } ;
+          [2]	= {
+              ["name"]	= "FM&直播" ;
+              ["icon"]	= "drawable/brightness_2.png" ;
+              ["onClick"]	= "进入子页面(\"FM&直播\",{标题=\"FM&直播\",链接=\"\"})" ;
+              } ;
+          [3]	= {
+              ["name"]	= "社区" ;
+              ["icon"]	= "drawable/nature_people.png" ;
+              ["onClick"]	= "进入子页面(\"社区\",{标题=\"社区\",链接=\"\"})" ;
+              } ;
+          [4]	= {
+              ["name"]	= "瞅瞅憨憨" ;
+              ["icon"]	= "drawable/account_box_outline.png" ;
+              ["onClick"]	= "进入子页面(\"瞅瞅憨憨\",{标题=\"瞅瞅憨憨\",链接=\"\"})" ;
+              } ;
+          [5]	= {
+              ["name"]	= "了解憨憨" ;
+              ["icon"]	= "drawable/account_alert.png" ;
+              ["onClick"]	= "进入子页面(\"了解憨憨\")" ;
+              } ;
+          [6]	= {
+              ["name"]	= "憨の壁纸收藏库" ;
+              ["icon"]	= "drawable/picture.png" ;
+              ["onClick"]	= "进入子页面(\"憨の壁纸收藏库\",{标题=\"壁纸库\",链接=\"https://www.coolapk.com/picture/16103071?shareKey=NDRjNDcwZDE4NGNiNWYyMmExOWY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\"})" ;
+              } ;
+          [7]	= {
+              ["name"]	= "作者的压箱资源" ;
+              ["icon"]	= "drawable/dropbox.png" ;
+              ["onClick"]	= "加载网页(\"https://mayfly.lanzous.com/b015dww5e\")" ;
+              } ;
+          [8]	= {
+              ["name"]	= "搜狗输入法皮肤快捷获取" ;
+              ["icon"]	= "drawable/auto_fix.png" ;
+              ["onClick"]	= "加载网页(\"https://shouji.sogou.com/interface/skin.php?skin_id=173900&v=10.0\")" ;
+              } ;
+          [9]	= {
+              ["name"]	= "关于此软件" ;
+              ["icon"]	= "drawable/account_check.png" ;
+              ["onClick"]	= "对话框()\
+.设置标题(\"关于\")\
+.设置消息(\"此软件完全免费，不得用于买卖交易\\n考虑到学业问题，更新时间改为随缘\\n此软件用Fusion App制作\\n作者：蜉蝣&绫沫\\n联系方式：\\nQQ：2385646346\\n酷安：蜉蝣Mayfly\\n微博：蜉蝣fy_\")\
+.设置积极按钮(\"了解\")\
+.显示()" ;
+              } ;
+          [10]	= {
+              ["name"]	= "2.4版本更新说明" ;
+              ["icon"]	= "drawable/worker.png" ;
+              ["onClick"]	= "对话框()\
+.设置标题(\"关于2.4版本\")\
+.设置消息(\"将实时公告改为启动时弹窗\\n更新了版本号\")\
+.设置积极按钮(\"了解\")\
+.显示()" ;
+              } ;
+          [11]	= {
+              ["name"]	= "联系我们" ;
+              ["icon"]	= "drawable/account_multiple_plus.png" ;
+              ["onClick"]	= "加QQ群(1128216585)" ;
+              } ;
+          [12]	= {
+              ["name"]	= "分享该软件" ;
+              ["icon"]	= "drawable/heart.png" ;
+              ["onClick"]	= "弹出消息(\"让更多毛怪知道吧~\")\
+分享文本(\"分享一个APP，毛怪の宝库，下载地址：https://mayfly.lanzous.com/b015nisvc\")" ;
+              } ;
+          [13]	= {
+              ["name"]	= "检查更新" ;
+              ["icon"]	= "drawable/arrow_up_bold_circle_outline.png" ;
+              ["onClick"]	= " local urla=\"http://www.iyuji.cn/iyuji/s/aXBlVkczRnBYNGpFVWU5V3hoaXg0dz09/1596519098967724\"\
+    canoffline=false\
+    packinfo=this.getPackageManager().getPackageInfo(this.getPackageName(),((32552732/2/2-8183)/10000-6-231)/9)\
+    Http.get(urla,nil,\"UTF-8\",nil,function(code,content,cookie,header)\
+      if(code==200 and content)then\
+        content=content:gsub(\"amp;\",\"\") or content;\
+        update=content:match(\"%{更新:(.-):END%}\")\
+        if(update)then\
+          newest=update:match(\"%【版本:(.-):END%】\")\
+          if(usevername)then\
+            version=tostring(packinfo.versionName)\
+          else\
+            version=tostring(packinfo.versionCode)\
+          end\
+          chglog=update:match(\"%【更新日志:(.-):END%】\")\
+          下载链接=content:match(\"【下载地址】(.-)【下载地址】\")\
+          if not((usevername and version==newest) or (not usevername and version>=newest))then\
+          对话框()\
+.设置标题(\"应用更新\")\
+.设置消息(\"当前版本2.4：\"..newest)\
+.设置积极按钮(\"更新\",function()\
+  webView.getSettings().setUserAgentString(\"MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1\");\
+  加载网页(\"\"..下载链接)\
+end)\
+.设置消极按钮(\"取消\")\
+.显示()\
+          else \
+            return true\
+          end \
+        else\
+          return true \
+        end\
+      else\
+        if(code==-1)then\
+          弹出消息(\"无法连接网络，请检查您的网络设置\")\
+        else\
+          弹出消息(\"网络请求失败\"..\" \"..code)\
+        end\
+        end\
+    end)" ;
               } ;
           } ;
-      ["icon_btns"]	= {
-          } ;
-      ["启用搜索功能"]	= false ;
-      ["搜索URL"]	= "" ;
+      ["启用"]	= true ;
+      ["启用顶部图片"]	= true ;
       } ;
   } ;
