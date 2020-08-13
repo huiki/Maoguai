@@ -1,8 +1,6 @@
 template="tab"
-appname="毛怪の宝库"
-packagename="com.Mayflyapp.Maoguai"
+appver="2.4-٩( 'ω' )و "
 appcode="24"
-appver="2.4"
 user_permission={
   [1]	= "ACCESS_COARSE_LOCATION" ;
   [2]	= "ACCESS_FINE_LOCATION" ;
@@ -11,3 +9,5 @@ user_permission={
   [5]	= "INTERNET" ;
   [6]	= "WRITE_EXTERNAL_STORAGE" ;
   } ;
+appname="毛怪の宝库"
+packagename="com.Mayflyapp.Maoguai"
