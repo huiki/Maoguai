@@ -1,184 +1,8 @@
 {
-  ["web_control"]	= {
-      [2]	= {
-          ["remove_element"]	= "" ;
-          ["js"]	= "\
-document.body.style.paddingTop=0" ;
-          ["url"]	= "m.weibo.cn" ;
-          } ;
-      [1]	= {
-          ["remove_element"]	= "hot-reply-footer,app-open,feed-status," ;
-          ["js"]	= "" ;
-          ["url"]	= "www.coolapk.com" ;
-          } ;
-      } ;
-  ["events"]	= {
-      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
-\
---接收参数\
-浏览器对象,新标题=..." ;
-      ["程序启动"]	= "对话框()\
-.设置标题(\"提示\")\
-.设置消息(\"右上角有快捷退出功能\\n斗鱼的长按保存即可\")\
-.设置积极按钮(\"了解了\",function()\
-  显示消息(\"点击了了解了\")\
-end)\
-.设置消极按钮(\"嗝\")\
-.显示()" ;
-      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
-      } ;
-  ["switch"]	= {
-      ["显示状态栏"]	= true ;
-      ["横屏"]	= false ;
-      ["支持滑动页面"]	= true ;
-      ["启用启动图"]	= false ;
-      } ;
-  ["web"]	= {
-      ["支持打开外部应用"]	= true ;
-      ["网页沉浸"]	= false ;
-      ["惰性加载"]	= true ;
-      ["启用长按菜单"]	= true ;
-      ["启用进度条"]	= true ;
-      ["浏览器用户标识"]	= "默认" ;
-      } ;
-  ["toolbar"]	= {
-      ["menus"]	= {
-          [1]	= {
-              ["onClick"]	= "退出页面()" ;
-              ["name"]	= "退出页面" ;
-              } ;
-          } ;
-      ["搜索URL"]	= "" ;
-      ["搜索框提示"]	= "输入关键词搜索.." ;
-      ["输入栏模式"]	= true ;
-      ["启用搜索功能"]	= false ;
-      ["icon_btns"]	= {
-          } ;
-      } ;
-  ["sidebar"]	= {
-      ["items"]	= {
-          [1]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/16103071?shareKey=NDRjNDcwZDE4NGNiNWYyMmExOWY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")\
-" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第一期" ;
-              } ;
-          [2]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20525726?shareKey=NzUyZjg0M2VlYjNhNWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第二期" ;
-              } ;
-          [3]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/feed/19342210?shareKey=NGIxMWE3OTVmNGI2NWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第三期" ;
-              } ;
-          [4]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/19143274?shareKey=ZWEzZDdjODRiYzU1NWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第四期" ;
-              } ;
-          [5]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/feed/19251523?shareKey=NzMzMDU4ZWIwOWRkNWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第五期" ;
-              } ;
-          [6]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/19141386?shareKey=YTE5ODQ2ZDUxOWM1NWYyMzZlODc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第六期" ;
-              } ;
-          [7]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/19103111?shareKey=ZTIxYTY5ZjllYmI1NWYyMzZlODc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第七期" ;
-              } ;
-          [8]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/feed/18865020?shareKey=YjE1YmY4NzY4YmNmNWYyMzZlOTU~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第八期(猫猫画作)" ;
-              } ;
-          [9]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20036010?shareKey=YTI4NTQ5NWZlYjUxNWYyMzZlODc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第九期" ;
-              } ;
-          [10]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20571185?shareKey=NzdiODgwZTA4YjAxNWYyM2U4YjQ~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十期" ;
-              } ;
-          [11]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20576532?shareKey=NTYxY2E3OTM1ZjVlNWYyNDIxZTc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十一期" ;
-              } ;
-          [12]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20576611?shareKey=YTZkMzNhNDRjODlmNWYyNDIyYmE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十二期" ;
-              } ;
-          [13]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20584259?shareKey=YTljZDM0ZDcyYTE0NWYyNGNlZWE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十三期" ;
-              } ;
-          [14]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20584375?shareKey=NmI1MDdiYzg5ZjBlNWYyNGQwODY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十四期" ;
-              } ;
-          [15]	= {
-              ["onClick"]	= "加载网页(\"https://yubam.douyu.com/post/375590361596244383\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十五期" ;
-              } ;
-          [16]	= {
-              ["onClick"]	= "加载网页(\"https://yubam.douyu.com/post/825688231596244752\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十六期" ;
-              } ;
-          [17]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20645226?shareKey=MTEwYTA1ZWNhYTFjNWYyODFlMGI~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十七期" ;
-              } ;
-          [18]	= {
-              ["onClick"]	= "加载网页(\"https://m.weibo.cn/6459144316/4533800657490534\")\
-" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十八期" ;
-              } ;
-          [19]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20629651?shareKey=MjljOWIxM2JhNGIyNWYyODFlMGE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第十九期" ;
-              } ;
-          [20]	= {
-              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20605941?shareKey=MjNlNDljM2Y3ZTRiNWYyODFlMGE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第二十期" ;
-              } ;
-          [21]	= {
-              ["onClick"]	= "加载网页(\"https://m.weibo.cn/6447171158/4535821258457922\")" ;
-              ["icon"]	= "drawable/pill.png" ;
-              ["name"]	= "第二十一期" ;
-              } ;
-          } ;
-      ["启用"]	= true ;
-      ["启用顶部图片"]	= false ;
-      } ;
   ["fltBtn"]	= {
+      ["显示"]	= false ;
       ["点击事件"]	= "刷新网页()--悬浮按钮点击时执行的事件" ;
       ["图标"]	= "" ;
-      ["显示"]	= false ;
       } ;
   ["tab_bar"]	= {
       ["items"]	= {
@@ -188,34 +12,210 @@ end)\
               } ;
           } ;
       } ;
+  ["sidebar"]	= {
+      ["items"]	= {
+          [1]	= {
+              ["name"]	= "第一期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/16103071?shareKey=NDRjNDcwZDE4NGNiNWYyMmExOWY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")\
+" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [2]	= {
+              ["name"]	= "第二期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20525726?shareKey=NzUyZjg0M2VlYjNhNWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [3]	= {
+              ["name"]	= "第三期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/feed/19342210?shareKey=NGIxMWE3OTVmNGI2NWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [4]	= {
+              ["name"]	= "第四期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/19143274?shareKey=ZWEzZDdjODRiYzU1NWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [5]	= {
+              ["name"]	= "第五期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/feed/19251523?shareKey=NzMzMDU4ZWIwOWRkNWYyMmU1ODk~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [6]	= {
+              ["name"]	= "第六期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/19141386?shareKey=YTE5ODQ2ZDUxOWM1NWYyMzZlODc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [7]	= {
+              ["name"]	= "第七期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/19103111?shareKey=ZTIxYTY5ZjllYmI1NWYyMzZlODc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [8]	= {
+              ["name"]	= "第八期(猫猫画作)" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/feed/18865020?shareKey=YjE1YmY4NzY4YmNmNWYyMzZlOTU~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [9]	= {
+              ["name"]	= "第九期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20036010?shareKey=YTI4NTQ5NWZlYjUxNWYyMzZlODc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [10]	= {
+              ["name"]	= "第十期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20571185?shareKey=NzdiODgwZTA4YjAxNWYyM2U4YjQ~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [11]	= {
+              ["name"]	= "第十一期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20576532?shareKey=NTYxY2E3OTM1ZjVlNWYyNDIxZTc~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [12]	= {
+              ["name"]	= "第十二期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20576611?shareKey=YTZkMzNhNDRjODlmNWYyNDIyYmE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [13]	= {
+              ["name"]	= "第十三期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20584259?shareKey=YTljZDM0ZDcyYTE0NWYyNGNlZWE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [14]	= {
+              ["name"]	= "第十四期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20584375?shareKey=NmI1MDdiYzg5ZjBlNWYyNGQwODY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [15]	= {
+              ["name"]	= "第十五期" ;
+              ["onClick"]	= "加载网页(\"https://yubam.douyu.com/post/375590361596244383\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [16]	= {
+              ["name"]	= "第十六期" ;
+              ["onClick"]	= "加载网页(\"https://yubam.douyu.com/post/825688231596244752\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [17]	= {
+              ["name"]	= "第十七期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20645226?shareKey=MTEwYTA1ZWNhYTFjNWYyODFlMGI~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [18]	= {
+              ["name"]	= "第十八期" ;
+              ["onClick"]	= "加载网页(\"https://m.weibo.cn/6459144316/4533800657490534\")\
+" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [19]	= {
+              ["name"]	= "第十九期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20629651?shareKey=MjljOWIxM2JhNGIyNWYyODFlMGE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [20]	= {
+              ["name"]	= "第二十期" ;
+              ["onClick"]	= "加载网页(\"https://www.coolapk.com/picture/20605941?shareKey=MjNlNDljM2Y3ZTRiNWYyODFlMGE~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          [21]	= {
+              ["name"]	= "第二十一期" ;
+              ["onClick"]	= "加载网页(\"https://m.weibo.cn/6447171158/4535821258457922\")" ;
+              ["icon"]	= "drawable/pill.png" ;
+              } ;
+          } ;
+      ["启用顶部图片"]	= false ;
+      ["启用"]	= true ;
+      } ;
+  ["web_control"]	= {
+      [2]	= {
+          ["remove_element"]	= "" ;
+          ["js"]	= "\
+document.body.style.paddingTop=0" ;
+          ["url"]	= "m.weibo.cn" ;
+          } ;
+      [1]	= {
+          ["remove_element"]	= "hot-reply-footer,app-open,feed-status,mobile-header-content" ;
+          ["js"]	= "" ;
+          ["url"]	= "www.coolapk.com" ;
+          } ;
+      } ;
+  ["events"]	= {
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象,新标题=..." ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "对话框()\
+.设置标题(\"提示\")\
+.设置消息(\"右上角有快捷退出功能\\n斗鱼的长按保存即可\")\
+.设置积极按钮(\"了解了\",function()\
+  显示消息(\"点击了了解了\")\
+end)\
+.设置消极按钮(\"嗝\")\
+.显示()" ;
+      } ;
   ["colors"]	= {
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["顶栏"]	= "#ff7e593e" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["悬浮按钮"]	= "#ff7e593e" ;
       ["标签栏文本"]	= "#ffffffff" ;
-      ["进度条"]	= "#ff7e593e" ;
       ["标签栏项目触摸"]	= "#33000000" ;
       ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["状态栏"]	= "#ffffffff" ;
       ["搜索栏背景"]	= "#ffffffff" ;
-      ["悬浮按钮"]	= "#ff7e593e" ;
-      ["标签栏滑动条"]	= "#ff7e593e" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["进度条"]	= "#ff7e593e" ;
+      ["状态栏"]	= "#ffffffff" ;
       ["顶栏部件"]	= "#ffffffff" ;
-      ["侧滑栏背景"]	= "#e3ffffff" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["顶栏部件触摸"]	= "#33ffffff" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["顶栏"]	= "#ff7e593e" ;
+      ["标签栏滑动条"]	= "#ff7e593e" ;
+      ["搜索栏部件"]	= "#ff888888" ;
       ["搜索栏部件触摸"]	= "#44000000" ;
+      ["侧滑栏背景"]	= "#aeebebeb" ;
+      ["侧滑栏列表图标"]	= "#ff7e593e" ;
+      ["顶栏部件触摸"]	= "#33ffffff" ;
+      } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["启用启动图"]	= false ;
+      ["支持滑动页面"]	= true ;
+      } ;
+  ["toolbar"]	= {
+      ["启用搜索功能"]	= false ;
+      ["输入栏模式"]	= true ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "退出页面" ;
+              } ;
+          } ;
+      ["搜索框提示"]	= "输入关键词搜索.." ;
+      ["icon_btns"]	= {
+          } ;
+      ["搜索URL"]	= "" ;
+      } ;
+  ["web"]	= {
+      ["网页沉浸"]	= false ;
+      ["启用长按菜单"]	= true ;
+      ["启用进度条"]	= true ;
+      ["支持打开外部应用"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["惰性加载"]	= true ;
       } ;
   ["view_attribute"]	= {
       ["侧滑栏宽度"]	= "240dp" ;
-      ["标签栏滑动条高度"]	= "3dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["顶栏高度"]	= "60dp" ;
-      ["标签栏高度"]	= "0dp" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["顶栏标题"]	= "壁纸库" ;
       ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏标题"]	= "壁纸库" ;
+      ["顶栏高度"]	= "60dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["标签栏高度"]	= "0dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["标签栏滑动条高度"]	= "3dp" ;
       } ;
   } ;

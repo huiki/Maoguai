@@ -1,6 +1,6 @@
+appver="2.5"
+appcode="25"
 template="tab"
-appver="2.4-٩( 'ω' )و "
-appcode="24"
 user_permission={
   [1]	= "ACCESS_COARSE_LOCATION" ;
   [2]	= "ACCESS_FINE_LOCATION" ;
