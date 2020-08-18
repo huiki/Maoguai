@@ -1,0 +1,171 @@
+{
+  ["colors"]	= {
+      ["标签栏文本"]	= "#ffffffff" ;
+      ["顶栏部件触摸"]	= "#33ffffff" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["侧滑栏列表图标"]	= "#ff7e593e" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["悬浮按钮"]	= "#ff7e593e" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["标签栏滑动条"]	= "#ff7e593e" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["顶栏"]	= "#ff7e593e" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["标签栏项目触摸"]	= "#33000000" ;
+      ["进度条"]	= "#ff7e593e" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["状态栏"]	= "#ffffffff" ;
+      ["侧滑栏背景"]	= "#b1dadada" ;
+      } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["启用启动图"]	= false ;
+      ["支持滑动页面"]	= true ;
+      ["显示状态栏"]	= true ;
+      } ;
+  ["events"]	= {
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象,新标题=..." ;
+      ["程序启动"]	= "" ;
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      } ;
+  ["tab_bar"]	= {
+      ["items"]	= {
+          [1]	= {
+              ["url"]	= "https://shimo.im/docs/KDRvXryjG8QjCTqH/ " ;
+              ["name"]	= "" ;
+              } ;
+          } ;
+      } ;
+  ["toolbar"]	= {
+      ["menus"]	= {
+          [4]	= {
+              ["name"]	= "检查更新" ;
+              ["onClick"]	= " local urla=\"https://wds.ecsxs.com/493.html\"\
+    canoffline=false\
+    packinfo=this.getPackageManager().getPackageInfo(this.getPackageName(),((32552732/2/2-8183)/10000-6-231)/9)\
+    Http.get(urla,nil,\"UTF-8\",nil,function(code,content,cookie,header)\
+      if(code==200 and content)then\
+        content=content:gsub(\"amp;\",\"\") or content;\
+        update=content:match(\"%{更新:(.-):END%}\")\
+        if(update)then\
+          newest=update:match(\"%【版本:(.-):END%】\")\
+          if(usevername)then\
+            version=tostring(packinfo.versionName)\
+          else\
+            version=tostring(packinfo.versionCode)\
+          end\
+          chglog=update:match(\"%【更新日志:(.-):END%】\")\
+          下载链接=content:match(\"【下载地址】(.-)【下载地址】\")\
+          if not((usevername and version==newest) or (not usevername and version>=newest))then\
+          对话框()\
+.设置标题(\"应用更新\")\
+.设置消息(\"当前版本V2.6：\"..newest)\
+.设置积极按钮(\"更新\",function()\
+  webView.getSettings().setUserAgentString(\"MQQBrowser/26 Mozilla/5.0 (Linux; U; Android 2.3.7; zh-cn; MB200 Build/GRJ22; CyanogenMod-7) AppleWebKit/533.1 (KHTML, like Gecko) Version/4.0 Mobile Safari/533.1\");\
+  加载网页(\"\"..下载链接)\
+end)\
+.设置消极按钮(\"取消\")\
+.显示()\
+          else \
+            return true\
+          end \
+        else\
+          return true \
+        end\
+      else\
+        if(code==-1)then\
+          弹出消息(\"无法连接网络，请检查您的网络设置\")\
+        else\
+          弹出消息(\"网络请求失败\"..\" \"..code)\
+        end\
+        end\
+    end)" ;
+              } ;
+          [1]	= {
+              ["name"]	= "关闭此页面" ;
+              ["onClick"]	= "退出页面()" ;
+              } ;
+          [2]	= {
+              ["name"]	= "联系我们" ;
+              ["onClick"]	= "加QQ群(1128216585)" ;
+              } ;
+          [3]	= {
+              ["name"]	= "分享该软件" ;
+              ["onClick"]	= "弹出消息(\"让更多毛怪知道吧~\")\
+分享文本(\"分享一个APP，毛怪の宝库，下载地址：https://mayfly.lanzous.com/b015nisvc\")" ;
+              } ;
+          } ;
+      ["启用搜索功能"]	= false ;
+      ["搜索URL"]	= "" ;
+      ["搜索框提示"]	= "输入关键词搜索.." ;
+      ["icon_btns"]	= {
+          } ;
+      ["输入栏模式"]	= false ;
+      } ;
+  ["web_control"]	= {
+      [1]	= {
+          ["remove_element"]	= "" ;
+          ["url"]	= "shimo.im" ;
+          ["js"]	= "document.getElementsByClassName(\"sc-jDwBTQ bIYnhT\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"invok-content\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-bwzfXH RbGWk\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-htpNat iIPInT\")[0].setAttribute(\"style\",\"display:none\");" ;
+          } ;
+      } ;
+  ["sidebar"]	= {
+      ["启用"]	= true ;
+      ["items"]	= {
+          [1]	= {
+              ["onClick"]	= "弹出消息(\"敬请期待\")\
+弹出消息(\"敬请期待\")\
+弹出消息(\"敬请期待\")\
+弹出消息(\"敬请期待\")" ;
+              ["name"]	= "常见问题" ;
+              ["icon"]	= "drawable/book.png" ;
+              } ;
+          [2]	= {
+              ["onClick"]	= "" ;
+              ["name"]	= "第二期" ;
+              ["icon"]	= "drawable/book.png" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "" ;
+              ["name"]	= "第三期" ;
+              ["icon"]	= "drawable/book.png" ;
+              } ;
+          } ;
+      ["启用顶部图片"]	= false ;
+      } ;
+  ["web"]	= {
+      ["浏览器用户标识"]	= "默认" ;
+      ["网页沉浸"]	= false ;
+      ["支持打开外部应用"]	= true ;
+      ["启用进度条"]	= true ;
+      ["启用长按菜单"]	= true ;
+      ["惰性加载"]	= true ;
+      } ;
+  ["view_attribute"]	= {
+      ["顶栏高度"]	= "40dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["标签栏高度"]	= "25dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏标题"]	= "☜更多" ;
+      ["标签栏滑动条高度"]	= "3dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      } ;
+  ["fltBtn"]	= {
+      ["显示"]	= false ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      ["图标"]	= "" ;
+      } ;
+  } ;

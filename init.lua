@@ -1,5 +1,4 @@
-appver="2.5"
-appcode="25"
+appcode="26"
 template="tab"
 user_permission={
   [1]	= "ACCESS_COARSE_LOCATION" ;
@@ -9,5 +8,6 @@ user_permission={
   [5]	= "INTERNET" ;
   [6]	= "WRITE_EXTERNAL_STORAGE" ;
   } ;
+appver="V2.6"
 appname="毛怪の宝库"
 packagename="com.Mayflyapp.Maoguai"

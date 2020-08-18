@@ -1,2 +1,2 @@
-name="社区"
+name="关于"
 template="tab"
