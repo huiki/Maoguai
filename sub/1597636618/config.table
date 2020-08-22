@@ -1,36 +1,19 @@
 {
-  ["colors"]	= {
-      ["标签栏文本"]	= "#ffffffff" ;
-      ["顶栏部件触摸"]	= "#33ffffff" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["侧滑栏列表图标"]	= "#ff7e593e" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["悬浮按钮"]	= "#ff7e593e" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["标签栏滑动条"]	= "#ff7e593e" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["顶栏"]	= "#ff7e593e" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["标签栏项目触摸"]	= "#33000000" ;
-      ["进度条"]	= "#ff7e593e" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["状态栏"]	= "#ffffffff" ;
-      ["侧滑栏背景"]	= "#b1dadada" ;
-      } ;
-  ["switch"]	= {
-      ["横屏"]	= false ;
-      ["启用启动图"]	= false ;
-      ["支持滑动页面"]	= true ;
-      ["显示状态栏"]	= true ;
+  ["view_attribute"]	= {
+      ["顶栏标题"]	= "☜更多" ;
+      ["标签栏滑动条高度"]	= "3dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      ["顶栏高度"]	= "40dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["标签栏高度"]	= "25dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
       } ;
   ["events"]	= {
       ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
 \
 --接收参数\
 浏览器对象,新标题=..." ;
-      ["程序启动"]	= "" ;
       ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
 \
 --接收参数\
@@ -39,6 +22,22 @@
 \
 --接收参数\
 浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "" ;
+      } ;
+  ["web_control"]	= {
+      [1]	= {
+          ["js"]	= "document.getElementsByClassName(\"sm-tooltip-arrow\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-kpOJdX kaYYWJ\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-kGXeez iQvIYb\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"invok-content\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sm-tooltip-inner\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-cMljjf fwmQAP\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-gPEVay dURSuU\")[0].setAttribute(\"style\",\"display:none\");" ;
+          ["url"]	= "shimo.im" ;
+          ["remove_element"]	= "" ;
+          } ;
+      } ;
+  ["web"]	= {
+      ["支持打开外部应用"]	= true ;
+      ["惰性加载"]	= true ;
+      ["启用长按菜单"]	= true ;
+      ["启用进度条"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["网页沉浸"]	= false ;
       } ;
   ["tab_bar"]	= {
       ["items"]	= {
@@ -48,11 +47,51 @@
               } ;
           } ;
       } ;
+  ["fltBtn"]	= {
+      ["显示"]	= false ;
+      ["图标"]	= "" ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      } ;
+  ["sidebar"]	= {
+      ["启用顶部图片"]	= false ;
+      ["items"]	= {
+          [1]	= {
+              ["name"]	= "常见问题" ;
+              ["icon"]	= "drawable/book.png" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/qYDrrVHxGvjgdVvK/\")" ;
+              } ;
+          [2]	= {
+              ["name"]	= "第二期" ;
+              ["icon"]	= "drawable/book.png" ;
+              ["onClick"]	= "" ;
+              } ;
+          [3]	= {
+              ["name"]	= "第三期" ;
+              ["icon"]	= "drawable/book.png" ;
+              ["onClick"]	= "" ;
+              } ;
+          } ;
+      ["启用"]	= true ;
+      } ;
   ["toolbar"]	= {
+      ["搜索框提示"]	= "输入关键词搜索.." ;
       ["menus"]	= {
           [4]	= {
-              ["name"]	= "检查更新" ;
-              ["onClick"]	= " local urla=\"https://wds.ecsxs.com/493.html\"\
+              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "退出页面" ;
+              } ;
+          [1]	= {
+              ["onClick"]	= "加QQ群(1128216585)" ;
+              ["name"]	= "联系我们" ;
+              } ;
+          [2]	= {
+              ["onClick"]	= "弹出消息(\"让更多毛怪知道吧~\")\
+分享文本(\"分享一个APP，毛怪の宝库，下载地址：https://mayfly.lanzous.com/b015nisvc\")" ;
+              ["name"]	= "分享该软件" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "弹出消息(\"全速检查中！！\")\
+ local urla=\"https://wds.ecsxs.com/493.html\"\
     canoffline=false\
     packinfo=this.getPackageManager().getPackageInfo(this.getPackageName(),((32552732/2/2-8183)/10000-6-231)/9)\
     Http.get(urla,nil,\"UTF-8\",nil,function(code,content,cookie,header)\
@@ -92,80 +131,39 @@ end)\
         end\
         end\
     end)" ;
-              } ;
-          [1]	= {
-              ["name"]	= "关闭此页面" ;
-              ["onClick"]	= "退出页面()" ;
-              } ;
-          [2]	= {
-              ["name"]	= "联系我们" ;
-              ["onClick"]	= "加QQ群(1128216585)" ;
-              } ;
-          [3]	= {
-              ["name"]	= "分享该软件" ;
-              ["onClick"]	= "弹出消息(\"让更多毛怪知道吧~\")\
-分享文本(\"分享一个APP，毛怪の宝库，下载地址：https://mayfly.lanzous.com/b015nisvc\")" ;
+              ["name"]	= "检查更新" ;
               } ;
           } ;
-      ["启用搜索功能"]	= false ;
-      ["搜索URL"]	= "" ;
-      ["搜索框提示"]	= "输入关键词搜索.." ;
       ["icon_btns"]	= {
           } ;
+      ["搜索URL"]	= "" ;
+      ["启用搜索功能"]	= false ;
       ["输入栏模式"]	= false ;
       } ;
-  ["web_control"]	= {
-      [1]	= {
-          ["remove_element"]	= "" ;
-          ["url"]	= "shimo.im" ;
-          ["js"]	= "document.getElementsByClassName(\"sc-jDwBTQ bIYnhT\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"invok-content\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-bwzfXH RbGWk\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-htpNat iIPInT\")[0].setAttribute(\"style\",\"display:none\");" ;
-          } ;
+  ["switch"]	= {
+      ["启用启动图"]	= false ;
+      ["横屏"]	= false ;
+      ["支持滑动页面"]	= true ;
+      ["显示状态栏"]	= true ;
       } ;
-  ["sidebar"]	= {
-      ["启用"]	= true ;
-      ["items"]	= {
-          [1]	= {
-              ["onClick"]	= "弹出消息(\"敬请期待\")\
-弹出消息(\"敬请期待\")\
-弹出消息(\"敬请期待\")\
-弹出消息(\"敬请期待\")" ;
-              ["name"]	= "常见问题" ;
-              ["icon"]	= "drawable/book.png" ;
-              } ;
-          [2]	= {
-              ["onClick"]	= "" ;
-              ["name"]	= "第二期" ;
-              ["icon"]	= "drawable/book.png" ;
-              } ;
-          [3]	= {
-              ["onClick"]	= "" ;
-              ["name"]	= "第三期" ;
-              ["icon"]	= "drawable/book.png" ;
-              } ;
-          } ;
-      ["启用顶部图片"]	= false ;
-      } ;
-  ["web"]	= {
-      ["浏览器用户标识"]	= "默认" ;
-      ["网页沉浸"]	= false ;
-      ["支持打开外部应用"]	= true ;
-      ["启用进度条"]	= true ;
-      ["启用长按菜单"]	= true ;
-      ["惰性加载"]	= true ;
-      } ;
-  ["view_attribute"]	= {
-      ["顶栏高度"]	= "40dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["标签栏高度"]	= "25dp" ;
-      ["搜索栏圆角弧度"]	= "2dp" ;
-      ["顶栏标题"]	= "☜更多" ;
-      ["标签栏滑动条高度"]	= "3dp" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["侧滑栏宽度"]	= "240dp" ;
-      } ;
-  ["fltBtn"]	= {
-      ["显示"]	= false ;
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
-      ["图标"]	= "" ;
+  ["colors"]	= {
+      ["悬浮按钮"]	= "#ff7e593e" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["标签栏项目触摸"]	= "#33000000" ;
+      ["侧滑栏背景"]	= "#b1dadada" ;
+      ["标签栏文本"]	= "#ffffffff" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["侧滑栏列表图标"]	= "#ff7e593e" ;
+      ["顶栏"]	= "#ff7e593e" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["进度条"]	= "#ff7e593e" ;
+      ["状态栏"]	= "#ffffffff" ;
+      ["顶栏部件触摸"]	= "#33ffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["标签栏滑动条"]	= "#ff7e593e" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
       } ;
   } ;

@@ -1,68 +1,107 @@
 {
-  ["switch"]	= {
-      ["横屏"]	= false ;
-      ["支持滑动页面"]	= true ;
-      ["显示状态栏"]	= true ;
-      ["启用启动图"]	= false ;
+  ["toolbar"]	= {
+      ["输入栏模式"]	= false ;
+      ["搜索URL"]	= "" ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "加载网页(\"https://m.weibo.cn/login?backURL=https://m.weibo.cn/p/100808bb3bdea1fba9b8b940c3cb788d3f0aae/super_index\")" ;
+              ["name"]	= "登录微博" ;
+              } ;
+          [2]	= {
+              ["onClick"]	= "加载网页(\"https://passport.bilibili.com/login?gourl=https://m.bilibili.com/space/11073\")" ;
+              ["name"]	= "登录哔哩哔哩" ;
+              } ;
+          [3]	= {
+              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "退出页面" ;
+              } ;
+          } ;
+      ["icon_btns"]	= {
+          } ;
+      ["搜索框提示"]	= "输入关键词搜索.." ;
+      ["启用搜索功能"]	= false ;
+      } ;
+  ["colors"]	= {
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["顶栏"]	= "#ff7e593e" ;
+      ["悬浮按钮"]	= "#ff7e593e" ;
+      ["顶栏部件触摸"]	= "#33ffffff" ;
+      ["状态栏"]	= "#ffffffff" ;
+      ["标签栏项目触摸"]	= "#33000000" ;
+      ["侧滑栏背景"]	= "#e3ffffff" ;
+      ["进度条"]	= "#ff7e593e" ;
+      ["标签栏滑动条"]	= "#ff7e593e" ;
+      ["标签栏文本"]	= "#ffffffff" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      } ;
+  ["tab_bar"]	= {
+      ["items"]	= {
+          [2]	= {
+              ["url"]	= "https://m.bilibili.com/space/11073" ;
+              ["name"]	= "哔哩哔哩" ;
+              } ;
+          [1]	= {
+              ["url"]	= "https://m.weibo.cn/u/1782536741" ;
+              ["name"]	= "微博" ;
+              } ;
+          } ;
       } ;
   ["view_attribute"]	= {
       ["侧滑栏宽度"]	= "240dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
       ["顶栏标题"]	= "瞅瞅憨憨" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
-      ["标签栏高度"]	= "20dp" ;
-      ["顶栏高度"]	= "40dp" ;
-      ["标签栏滑动条高度"]	= "3dp" ;
       ["搜索栏圆角弧度"]	= "2dp" ;
-      } ;
-  ["sidebar"]	= {
-      ["启用"]	= false ;
-      ["启用顶部图片"]	= false ;
-      ["items"]	= {
-          } ;
-      } ;
-  ["fltBtn"]	= {
-      ["点击事件"]	= "刷新网页()--悬浮按钮点击时执行的事件" ;
-      ["图标"]	= "" ;
-      ["显示"]	= false ;
-      } ;
-  ["colors"]	= {
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["标签栏滑动条"]	= "#ff7e593e" ;
-      ["标签栏项目触摸"]	= "#33000000" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["状态栏"]	= "#ffffffff" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["标签栏文本"]	= "#ffffffff" ;
-      ["悬浮按钮"]	= "#ff7e593e" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["顶栏部件触摸"]	= "#33ffffff" ;
-      ["进度条"]	= "#ff7e593e" ;
-      ["顶栏"]	= "#ff7e593e" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["侧滑栏背景"]	= "#e3ffffff" ;
+      ["标签栏高度"]	= "20dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["标签栏滑动条高度"]	= "3dp" ;
+      ["顶栏高度"]	= "40dp" ;
       } ;
   ["web_control"]	= {
       [2]	= {
+          ["url"]	= "m.bilibili.com" ;
           ["remove_element"]	= "m-navbar,m-space-float-openapp,m-video2-openapp,m-video2-toolbar,m-video-related,openapp report-scroll-module,m-video2-float-openapp,more-comment,download-btn bg-cover bg-center bg-no-repeat a-move-out-bottom," ;
           ["js"]	= "" ;
-          ["url"]	= "m.bilibili.com" ;
           } ;
       [1]	= {
+          ["url"]	= "m.weibo.cn" ;
           ["remove_element"]	= "appTips,topBarWrap,feed-loading hid,m-top-bar m-panel m-container-max m-topbar-max,btn,mask-wrap," ;
           ["js"]	= "" ;
-          ["url"]	= "m.weibo.cn" ;
+          } ;
+      } ;
+  ["fltBtn"]	= {
+      ["图标"]	= "" ;
+      ["显示"]	= false ;
+      ["点击事件"]	= "刷新网页()--悬浮按钮点击时执行的事件" ;
+      } ;
+  ["global_js"]	= "// ==UserScript== // @name 哔哩哔哩去除 6 分钟限制及 APP 下载 // @namespace http://tampermonkey.net/ // @version 0.6.2 // @description 去除手机版 6 分钟限制，添加网页跳转 // @author sl00p // @match https://m.bilibili.com/* // @grant none // @run-at document-end // ==/UserScript== (function() { 'use strict'; function httpReq(url, callBack) { let xHttp = new XMLHttpRequest(); xHttp.onreadystatechange = function () { if(this.readyState === 4 && this.status === 200) { callBack(xHttp.responseText); } }; xHttp.open(\"Get\", url, true); xHttp.send(); } // inject wechat cookie (function injectCookie() { if(window.localStorage && window.localStorage.getItem(\"window.bsource\") !== \"wechat\") { window.localStorage.setItem(\"window.bsource\", \"wechat\"); } if(document.cookie.indexOf(\"wechat\") === -1) { document.cookie = \"bsource=wechat\"; } })(); let lastRelateUrl = \"\"; let relateVideoInterVal; let ownerInterval; let relateEndVideoInterval; setInterval(function () { let url = document.location.href.split(\"/\"); let bVid = url[url.length - 1]; let relateUrl = \"https://api.bilibili.com/x/web-interface/archive/related?bvid=\" + bVid; if(bVid.length > 0 && relateUrl !== lastRelateUrl) { lastRelateUrl = relateUrl; clearInterval(relateVideoInterVal); clearInterval(ownerInterval); clearInterval(relateEndVideoInterval); httpReq(relateUrl, function (res) { let data = JSON.parse(res).data; let tidMap = {}; for(let i = 0; i < data.length; ++i) { if(tidMap.hasOwnProperty(data[i].tid)) { tidMap[data[i].tid] += 1; } else { tidMap[data[i].tid] = 1; } } // parse relate video path relateVideoInterVal = setInterval(function() { let nodes = document.getElementsByClassName(\"v-card-toapp\"); if (nodes !== undefined) { for(let i = 0; i < nodes.length; ++i) { nodes[i].getElementsByClassName('title')[0].innerHTML=\"<p><a href=\\\"\" + data[i].bvid + \"\\\" style=\\\"color:blue\\\">\" + data[i].title + \"</a></p>\"; } } }, 500); // parse owner name and remove app download tip ownerInterval = setInterval(function() { let nodeList = [\"m-video-openapp\", \"openapp\", \"m-video2-openapp\", \"m-video2-float-openapp\", \"m-related-openapp report-scroll-module\"]; let appList = [\"v-card-toapp\"]; for(let i = 0; i < appList.length; ++i) { let app = document.getElementsByClassName(appList[i]); for(let j = 0; j < app.length; ++j) { let ownerNameApp = app[j].getElementsByClassName('open-app'); if(ownerNameApp && ownerNameApp.length > 0) { ownerNameApp[0].innerText = data[j].owner.name; } } if (app && app.length > 0) { app.onclick = function() { return false }; for(let k = 0; k < nodeList.length; ++k) { if(document.getElementsByClassName(nodeList[k]).length > 0) { document.getElementsByClassName(nodeList[k])[0].remove(); } } } } }, 500); // parse end relate video relateEndVideoInterval = setInterval(function() { let relateVideo = document.getElementsByClassName(\"player-mobile-ending-panel-title\"); let app = document.getElementsByClassName(\"player-mobile-ending-panel-button\"); if(relateVideo !== undefined && relateVideo.length > 0) { for(let i = 0; i < data.length; ++i) { if(relateVideo[0].textContent === data[i].title) { relateVideo[0].innerHTML=\"<p><a href=\\\"\" + data[i].bvid + \"\\\" style=\\\"color:blue\\\">\" + data[i].title + \"</a></p>\"; if(app !== undefined && app.length > 0) { app[0].innerText = data[i].owner.name; } } } } }, 500); }) } }, 500); })();" ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["支持滑动页面"]	= true ;
+      ["启用启动图"]	= false ;
+      ["显示状态栏"]	= true ;
+      } ;
+  ["web"]	= {
+      ["启用长按菜单"]	= true ;
+      ["支持打开外部应用"]	= false ;
+      ["启用进度条"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["网页沉浸"]	= false ;
+      ["惰性加载"]	= true ;
+      } ;
+  ["sidebar"]	= {
+      ["启用顶部图片"]	= false ;
+      ["启用"]	= false ;
+      ["items"]	= {
           } ;
       } ;
   ["events"]	= {
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
-\
---接收参数\
-浏览器对象,新标题=..." ;
       ["程序启动"]	= "--程序启动时会执行的事件" ;
       ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
 \
@@ -72,48 +111,13 @@ if(网页链接:find\"download_app.html\") then\
   弹出消息(\"别点了，你点不开的（正在返回上一页面）\")\
   网页后退()\
 end" ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象,新标题=..." ;
       ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
 \
 --接收参数\
 浏览器对象,网页链接=..." ;
-      } ;
-  ["global_js"]	= "// ==UserScript== // @name 哔哩哔哩去除 6 分钟限制及 APP 下载 // @namespace http://tampermonkey.net/ // @version 0.6.2 // @description 去除手机版 6 分钟限制，添加网页跳转 // @author sl00p // @match https://m.bilibili.com/* // @grant none // @run-at document-end // ==/UserScript== (function() { 'use strict'; function httpReq(url, callBack) { let xHttp = new XMLHttpRequest(); xHttp.onreadystatechange = function () { if(this.readyState === 4 && this.status === 200) { callBack(xHttp.responseText); } }; xHttp.open(\"Get\", url, true); xHttp.send(); } // inject wechat cookie (function injectCookie() { if(window.localStorage && window.localStorage.getItem(\"window.bsource\") !== \"wechat\") { window.localStorage.setItem(\"window.bsource\", \"wechat\"); } if(document.cookie.indexOf(\"wechat\") === -1) { document.cookie = \"bsource=wechat\"; } })(); let lastRelateUrl = \"\"; let relateVideoInterVal; let ownerInterval; let relateEndVideoInterval; setInterval(function () { let url = document.location.href.split(\"/\"); let bVid = url[url.length - 1]; let relateUrl = \"https://api.bilibili.com/x/web-interface/archive/related?bvid=\" + bVid; if(bVid.length > 0 && relateUrl !== lastRelateUrl) { lastRelateUrl = relateUrl; clearInterval(relateVideoInterVal); clearInterval(ownerInterval); clearInterval(relateEndVideoInterval); httpReq(relateUrl, function (res) { let data = JSON.parse(res).data; let tidMap = {}; for(let i = 0; i < data.length; ++i) { if(tidMap.hasOwnProperty(data[i].tid)) { tidMap[data[i].tid] += 1; } else { tidMap[data[i].tid] = 1; } } // parse relate video path relateVideoInterVal = setInterval(function() { let nodes = document.getElementsByClassName(\"v-card-toapp\"); if (nodes !== undefined) { for(let i = 0; i < nodes.length; ++i) { nodes[i].getElementsByClassName('title')[0].innerHTML=\"<p><a href=\\\"\" + data[i].bvid + \"\\\" style=\\\"color:blue\\\">\" + data[i].title + \"</a></p>\"; } } }, 500); // parse owner name and remove app download tip ownerInterval = setInterval(function() { let nodeList = [\"m-video-openapp\", \"openapp\", \"m-video2-openapp\", \"m-video2-float-openapp\", \"m-related-openapp report-scroll-module\"]; let appList = [\"v-card-toapp\"]; for(let i = 0; i < appList.length; ++i) { let app = document.getElementsByClassName(appList[i]); for(let j = 0; j < app.length; ++j) { let ownerNameApp = app[j].getElementsByClassName('open-app'); if(ownerNameApp && ownerNameApp.length > 0) { ownerNameApp[0].innerText = data[j].owner.name; } } if (app && app.length > 0) { app.onclick = function() { return false }; for(let k = 0; k < nodeList.length; ++k) { if(document.getElementsByClassName(nodeList[k]).length > 0) { document.getElementsByClassName(nodeList[k])[0].remove(); } } } } }, 500); // parse end relate video relateEndVideoInterval = setInterval(function() { let relateVideo = document.getElementsByClassName(\"player-mobile-ending-panel-title\"); let app = document.getElementsByClassName(\"player-mobile-ending-panel-button\"); if(relateVideo !== undefined && relateVideo.length > 0) { for(let i = 0; i < data.length; ++i) { if(relateVideo[0].textContent === data[i].title) { relateVideo[0].innerHTML=\"<p><a href=\\\"\" + data[i].bvid + \"\\\" style=\\\"color:blue\\\">\" + data[i].title + \"</a></p>\"; if(app !== undefined && app.length > 0) { app[0].innerText = data[i].owner.name; } } } } }, 500); }) } }, 500); })();" ;
-  ["web"]	= {
-      ["支持打开外部应用"]	= false ;
-      ["惰性加载"]	= true ;
-      ["启用长按菜单"]	= true ;
-      ["网页沉浸"]	= false ;
-      ["启用进度条"]	= true ;
-      ["浏览器用户标识"]	= "默认" ;
-      } ;
-  ["tab_bar"]	= {
-      ["items"]	= {
-          [2]	= {
-              ["name"]	= "哔哩哔哩" ;
-              ["url"]	= "https://m.bilibili.com/space/11073" ;
-              } ;
-          [1]	= {
-              ["name"]	= "微博" ;
-              ["url"]	= "https://m.weibo.cn/u/1782536741" ;
-              } ;
-          } ;
-      } ;
-  ["toolbar"]	= {
-      ["icon_btns"]	= {
-          } ;
-      ["输入栏模式"]	= false ;
-      ["搜索URL"]	= "" ;
-      ["启用搜索功能"]	= false ;
-      ["搜索框提示"]	= "输入关键词搜索.." ;
-      ["menus"]	= {
-          [2]	= {
-              ["name"]	= "登录哔哩哔哩" ;
-              ["onClick"]	= "加载网页(\"https://passport.bilibili.com/login?gourl=https://m.bilibili.com/space/11073\")" ;
-              } ;
-          [1]	= {
-              ["name"]	= "登录微博" ;
-              ["onClick"]	= "加载网页(\"https://m.weibo.cn/login?backURL=https://m.weibo.cn/p/100808bb3bdea1fba9b8b940c3cb788d3f0aae/super_index\")" ;
-              } ;
-          } ;
       } ;
   } ;
