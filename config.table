@@ -1,86 +1,98 @@
 {
-  ["fltBtn"]	= {
-      ["图标"]	= "" ;
-      ["点击事件"]	= "--悬浮按钮点击时执行的事件\
-刷新网页()" ;
-      ["显示"]	= false ;
+  ["tab_bar"]	= {
+      ["items"]	= {
+          [1]	= {
+              ["name"]	= "" ;
+              ["url"]	= "https://blog.huiki.xyz/post/wallpaper-hanser-01/" ;
+              } ;
+          } ;
       } ;
   ["switch"]	= {
-      ["横屏"]	= false ;
-      ["支持滑动页面"]	= true ;
       ["显示状态栏"]	= true ;
       ["启用启动图"]	= true ;
+      ["支持滑动页面"]	= true ;
+      ["横屏"]	= false ;
       } ;
   ["toolbar"]	= {
-      ["搜索URL"]	= "" ;
       ["启用搜索功能"]	= false ;
-      ["输入栏模式"]	= false ;
-      ["搜索框提示"]	= "输入关键词搜索.." ;
       ["menus"]	= {
           [1]	= {
-              ["onClick"]	= "退出页面()" ;
               ["name"]	= "退出" ;
+              ["onClick"]	= "退出页面()" ;
               } ;
           } ;
       ["icon_btns"]	= {
           } ;
-      } ;
-  ["web_control"]	= {
-      [2]	= {
-          ["remove_element"]	= "" ;
-          ["js"]	= "document.getElementsByClassName(\"pc bgimg\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"d1\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"mf\")[0].setAttribute(\"style\",\"display:none\");" ;
-          ["url"]	= "mayfly.lanzous.com" ;
-          } ;
-      [1]	= {
-          ["remove_element"]	= "navbar navbar-expand-lg," ;
-          ["js"]	= "" ;
-          ["url"]	= "blog.huiki.xyz" ;
-          } ;
+      ["搜索框提示"]	= "输入关键词搜索.." ;
+      ["搜索URL"]	= "" ;
+      ["输入栏模式"]	= false ;
       } ;
   ["events"]	= {
+      ["网页加载完毕"]	= "" ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象,新标题=..." ;
       ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
 \
 --接收参数\
 浏览器对象,网页链接=..." ;
       ["程序启动"]	= "泡沫对话框(199)\
 .设置标题(\"这个版本更新了啥\")\
-.设置消息([[1.为所有页面右上角添加了退出         2.优化网页浏览]])\
+.设置消息([[1.重命名  憨の壁纸收藏库  为  官方/同人作                    2.更新作品到第二十四期]])\
 .设置积极按钮(\"搜嘎搜嘎\",function()\
   显示消息(\"点击了搜嘎搜嘎\")\
 end)\
 .设置消极按钮(\"QAQ\")\
 .显示()\
 " ;
-      ["网页加载完毕"]	= "" ;
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
-\
---接收参数\
-浏览器对象,新标题=..." ;
+      } ;
+  ["colors"]	= {
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["标签栏项目触摸"]	= "#33000000" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["标签栏滑动条"]	= "#ff7e593e" ;
+      ["状态栏"]	= "#ffffffff" ;
+      ["搜索栏背景"]	= "#aed3d3d3" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["进度条"]	= "#ff7e593e" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["悬浮按钮"]	= "#ff7e593e" ;
+      ["侧滑栏背景"]	= "#b1dadada" ;
+      ["标签栏文本"]	= "#ff000000" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["侧滑栏列表图标"]	= "#ff7e593e" ;
+      ["顶栏部件触摸"]	= "#33ffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["顶栏"]	= "#ff7e593e" ;
+      } ;
+  ["fltBtn"]	= {
+      ["显示"]	= false ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件\
+刷新网页()" ;
+      ["图标"]	= "" ;
       } ;
   ["view_attribute"]	= {
-      ["搜索栏圆角弧度"]	= "2dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
-      ["标签栏高度"]	= "25dp" ;
       ["标签栏滑动条高度"]	= "3dp" ;
-      ["侧滑栏宽度"]	= "240dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
       ["顶栏标题"]	= "毛怪の宝库" ;
-      ["顶栏高度"]	= "40dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      ["标签栏高度"]	= "25dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
       ["搜索栏阴影强度"]	= "2dp" ;
+      ["顶栏高度"]	= "40dp" ;
       } ;
-  ["web"]	= {
-      ["支持打开外部应用"]	= true ;
-      ["惰性加载"]	= true ;
-      ["启用进度条"]	= true ;
-      ["浏览器用户标识"]	= "默认" ;
-      ["启用长按菜单"]	= true ;
-      ["网页沉浸"]	= false ;
-      } ;
-  ["tab_bar"]	= {
-      ["items"]	= {
-          [1]	= {
-              ["url"]	= "https://blog.huiki.xyz/post/wallpaper-hanser-01/" ;
-              ["name"]	= "" ;
-              } ;
+  ["web_control"]	= {
+      [2]	= {
+          ["js"]	= "document.getElementsByClassName(\"pc bgimg\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"d1\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"mf\")[0].setAttribute(\"style\",\"display:none\");" ;
+          ["remove_element"]	= "" ;
+          ["url"]	= "mayfly.lanzous.com" ;
+          } ;
+      [1]	= {
+          ["js"]	= "" ;
+          ["remove_element"]	= "navbar navbar-expand-lg," ;
+          ["url"]	= "blog.huiki.xyz" ;
           } ;
       } ;
   ["global_js"]	= "<script src=\"/mskin/js/jquery.min.js\" type=\"text/javascript\"></script>\
@@ -107,78 +119,59 @@ end)\
             if (typeof(div) == 'undefined') {\
                 div = document.createElement('div');\
                 div.setAttri" ;
-  ["colors"]	= {
-      ["顶栏部件触摸"]	= "#33ffffff" ;
-      ["顶栏"]	= "#ff7e593e" ;
-      ["标签栏滑动条"]	= "#ff7e593e" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["侧滑栏列表图标"]	= "#ff7e593e" ;
-      ["状态栏"]	= "#ffffffff" ;
-      ["标签栏项目触摸"]	= "#33000000" ;
-      ["搜索栏背景"]	= "#aed3d3d3" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["悬浮按钮"]	= "#ff7e593e" ;
-      ["标签栏文本"]	= "#ff000000" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      ["进度条"]	= "#ff7e593e" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["侧滑栏背景"]	= "#b1dadada" ;
-      } ;
   ["sidebar"]	= {
       ["启用"]	= true ;
       ["启用顶部图片"]	= true ;
       ["items"]	= {
           [1]	= {
+              ["name"]	= "天使吟唱" ;
               ["icon"]	= "drawable/emoticon_devil.png" ;
               ["onClick"]	= "进入子页面(\"天使吟唱\",{标题=\"天使吟唱\",链接=\"\"})" ;
-              ["name"]	= "天使吟唱" ;
               } ;
           [2]	= {
+              ["name"]	= "FM&直播" ;
               ["icon"]	= "drawable/brightness_2.png" ;
               ["onClick"]	= "进入子页面(\"FM&直播\",{标题=\"FM&直播\",链接=\"\"})" ;
-              ["name"]	= "FM&直播" ;
               } ;
           [3]	= {
+              ["name"]	= "社区" ;
               ["icon"]	= "drawable/nature_people.png" ;
               ["onClick"]	= "进入子页面(\"社区\",{标题=\"社区\",链接=\"\"})" ;
-              ["name"]	= "社区" ;
               } ;
           [4]	= {
+              ["name"]	= "瞅瞅憨憨" ;
               ["icon"]	= "drawable/account_box_outline.png" ;
               ["onClick"]	= "进入子页面(\"瞅瞅憨憨\",{标题=\"瞅瞅憨憨\",链接=\"\"})" ;
-              ["name"]	= "瞅瞅憨憨" ;
               } ;
           [5]	= {
+              ["name"]	= "了解憨憨" ;
               ["icon"]	= "drawable/account_alert.png" ;
               ["onClick"]	= "进入子页面(\"了解憨憨\")" ;
-              ["name"]	= "了解憨憨" ;
               } ;
           [6]	= {
+              ["name"]	= "官方/同人作" ;
               ["icon"]	= "drawable/picture.png" ;
-              ["onClick"]	= "进入子页面(\"憨の壁纸收藏库\",{标题=\"壁纸库\",链接=\"https://www.coolapk.com/picture/16103071?shareKey=NDRjNDcwZDE4NGNiNWYyMmExOWY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\"})" ;
-              ["name"]	= "憨の壁纸收藏库" ;
+              ["onClick"]	= "进入子页面(\"官方/同人作\",{标题=\"作品\",链接=\"https://www.coolapk.com/picture/16103071?shareKey=NDRjNDcwZDE4NGNiNWYyMmExOWY~&shareUid=2384534&shareFrom=com.coolapk.market_10.4\"})" ;
               } ;
           [7]	= {
+              ["name"]	= "搜狗输入法皮肤快捷获取" ;
               ["icon"]	= "drawable/auto_fix.png" ;
               ["onClick"]	= "复制文本(\"https://pinyin.sogou.com/skins/sv_579509.htm\")\
 加载网页(\"https://shouji.sogou.com/interface/skin.php?skin_id=173900&v=10.0\")\
 弹出消息(\"电脑版皮肤链接已复制到剪贴板\")" ;
-              ["name"]	= "搜狗输入法皮肤快捷获取" ;
               } ;
           [8]	= {
+              ["name"]	= "新建文件夹" ;
               ["icon"]	= "drawable/folder_multiple.png" ;
               ["onClick"]	= "加载网页(\"https://mayfly.lanzous.com/b015orr9e\")" ;
-              ["name"]	= "新建文件夹" ;
               } ;
           [9]	= {
+              ["name"]	= "软件&关于" ;
               ["icon"]	= "drawable/account_check.png" ;
               ["onClick"]	= "进入子页面(\"关于\")" ;
-              ["name"]	= "软件&关于" ;
               } ;
           [10]	= {
+              ["name"]	= "实时公告" ;
               ["icon"]	= "drawable/web.png" ;
               ["onClick"]	= "弹出消息(\"正在获取中ing\")\
  local urla=\"https://wds.ecsxs.com/492.html\"\
@@ -220,8 +213,15 @@ end)\
         end\
         end\
     end)" ;
-              ["name"]	= "实时公告" ;
               } ;
           } ;
+      } ;
+  ["web"]	= {
+      ["网页沉浸"]	= false ;
+      ["启用长按菜单"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["惰性加载"]	= true ;
+      ["支持打开外部应用"]	= true ;
+      ["启用进度条"]	= true ;
       } ;
   } ;

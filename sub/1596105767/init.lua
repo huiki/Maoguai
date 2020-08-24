@@ -1,2 +1,2 @@
 template="tab"
-name="憨の壁纸收藏库"
+name="官方/同人作"
