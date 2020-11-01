@@ -1,0 +1,216 @@
+{
+  ["switch"]	= {
+      ["启用启动图"]	= false ;
+      ["横屏"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["支持滑动页面"]	= false ;
+      } ;
+  ["events"]	= {
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "--侧滑栏圆角\
+function CircleButton(view,InsideColor,radiu)\
+import \"android.graphics.drawable.GradientDrawable\"\
+drawable = GradientDrawable()\
+drawable.setShape(GradientDrawable.RECTANGLE)\
+drawable.setColor(InsideColor)\
+drawable.setCornerRadii({radiu,radiu,radiu,radiu,radiu,radiu,radiu,radiu});\
+view.setBackgroundDrawable(drawable)\
+end\
+角度=50\
+控件id=sidebar\
+控件颜色=0xFFFFFFFF\
+CircleButton(控件id,控件颜色,角度)\
+flt=sidebar.getLayoutParams( )\
+flt.setMargins(200, 200, 800, 250)\
+sidebar.setLayoutParams(flt)\
+--以上代码是侧滑栏圆角，高度，宽度，和上下边距的代码。\
+--获取页面根布局\
+local lay=drawerLayout.getChildAt(1)\
+--监听侧滑滑动事件\
+local pio=this.getWidth()*0.1\
+drawerLayout.setDrawerListener(DrawerLayout.DrawerListener{onDrawerSlide=function(v,i)\
+lay.setScaleX(1-i/13.5).setScaleY(1-i/12.5)--页面缩放\
+lay.setTranslationX((({0,0,1,0,-1})[v.LayoutParams.gravity])*(i*0.5*pio))--页面位移(其中那段奇怪的表是用于判断位移方向，不过依然仅支持左右侧滑)\
+--sidebar.setScaleX(i).setScaleY(i)--侧滑栏缩放\
+end})\
+\
+\
+\
+function isNightMode()\
+  local configuration = activity.getResources().getConfiguration();\
+  return configuration.uiMode+1==configuration.UI_MODE_NIGHT_YES or configuration.uiMode-1==configuration.UI_MODE_NIGHT_YES or configuration.uiMode==configuration.UI_MODE_NIGHT_YES\
+end\
+if isNightMode() then\
+  --填写id\
+if kaig==nil then\
+  gt=\
+  {--废物幽灵\
+    LinearLayout,\
+    id=\"overla\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  };\
+  toolbarParent.addView(loadlayout{\
+    LinearLayout,\
+    id=\"overlay\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  })\
+  webView.addView(loadlayout(gt))\
+  kaig=0\
+\
+\
+else\
+  webView.removeView(overla)\
+  toolbarParent.removeView(overlay)\
+  kaig=nil\
+end\
+else\
+  --变白天模式\
+end" ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象，新标题=..." ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      } ;
+  ["web"]	= {
+      ["网页沉浸"]	= false ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["启动网页"]	= "https://b23.tv/jeGjdK" ;
+      ["支持打开外部应用"]	= false ;
+      ["启用进度条"]	= true ;
+      ["启用长按菜单"]	= true ;
+      } ;
+  ["view_attribute"]	= {
+      ["顶栏高度"]	= "56dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["顶栏标题"]	= "Vlog收藏夹" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      } ;
+  ["web_control"]	= {
+      } ;
+  ["colors"]	= {
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["侧滑栏列表图标"]	= "#ffaea2ff" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["进度条"]	= "#ffff5d5d" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["顶栏"]	= "#ffaea2ff" ;
+      } ;
+  ["toolbar"]	= {
+      ["icon_btns"]	= {
+          [1]	= {
+              ["onClick"]	= "--填写id\
+if kaig==nil then\
+  gt=\
+  {--废物幽灵\
+    LinearLayout,\
+    id=\"overla\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  };\
+  toolbarParent.addView(loadlayout{\
+    LinearLayout,\
+    id=\"overlay\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  })\
+  webView.addView(loadlayout(gt))\
+  kaig=0\
+  print(\"夜间模式\")\
+\
+\
+else\
+  webView.removeView(overla)\
+  toolbarParent.removeView(overlay)\
+  kaig=nil\
+  print(\"日间模式\")\
+\
+\
+end" ;
+              ["icon"]	= "brightness_6" ;
+              } ;
+          } ;
+      ["输入栏模式"]	= true ;
+      ["启用搜索功能"]	= false ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "退出" ;
+              } ;
+          } ;
+      ["搜索URL"]	= "" ;
+      ["搜索框提示"]	= "" ;
+      } ;
+  ["fltBtn"]	= {
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      ["显示"]	= false ;
+      ["图标"]	= "" ;
+      } ;
+  ["sidebar"]	= {
+      ["启用"]	= true ;
+      ["items"]	= {
+          [1]	= {
+              ["name"]	= "说唱新世代" ;
+              ["onClick"]	= "加载网页(\"https://b23.tv/jeGjdK\")" ;
+              ["icon"]	= "drawable/camcorder.png" ;
+              } ;
+          [2]	= {
+              ["name"]	= "成都--看恐龙！(不管了，有憨都放进来" ;
+              ["onClick"]	= "加载网页(\"https://b23.tv/hf3U3t\")" ;
+              ["icon"]	= "drawable/camcorder.png" ;
+              } ;
+          [3]	= {
+              ["name"]	= "神秘の地--直播补偿(家居Vlog" ;
+              ["onClick"]	= "加载网页(\"https://b23.tv/y5EXsB\")" ;
+              ["icon"]	= "drawable/camcorder.png" ;
+              } ;
+          [4]	= {
+              ["name"]	= "米哈游公司--配音Vlog" ;
+              ["onClick"]	= "加载网页(\"https://b23.tv/8UZFFB\")" ;
+              ["icon"]	= "drawable/camcorder.png" ;
+              } ;
+          [5]	= {
+              ["name"]	= "日本--秋季旅行" ;
+              ["onClick"]	= "加载网页(\"https://b23.tv/QZQGIm\")" ;
+              ["icon"]	= "drawable/camcorder.png" ;
+              } ;
+          [6]	= {
+              ["name"]	= "镇海角--你看这蓝，真海" ;
+              ["onClick"]	= "加载网页(\"https://b23.tv/jEfJnc\")" ;
+              ["icon"]	= "drawable/camcorder.png" ;
+              } ;
+          [7]	= {
+              ["name"]	= "吉隆坡--无敌长的一次Vlog" ;
+              ["onClick"]	= "加载网页(\"https://b23.tv/FNPt3C\")" ;
+              ["icon"]	= "drawable/camcorder.png" ;
+              } ;
+          } ;
+      ["启用顶部图片"]	= false ;
+      } ;
+  } ;

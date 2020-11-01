@@ -1,13 +1,135 @@
 {
+  ["events"]	= {
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象,新标题=..." ;
+      ["程序启动"]	= "function isNightMode()\
+  local configuration = activity.getResources().getConfiguration();\
+  return configuration.uiMode+1==configuration.UI_MODE_NIGHT_YES or configuration.uiMode-1==configuration.UI_MODE_NIGHT_YES or configuration.uiMode==configuration.UI_MODE_NIGHT_YES\
+end\
+if isNightMode() then\
+  --填写id\
+if kaig==nil then\
+  gt=\
+  {--废物幽灵\
+    LinearLayout,\
+    id=\"overla\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  };\
+  toolbarParent.addView(loadlayout{\
+    LinearLayout,\
+    id=\"overlay\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  })\
+  webView.addView(loadlayout(gt))\
+  kaig=0\
+\
+\
+else\
+  webView.removeView(overla)\
+  toolbarParent.removeView(overlay)\
+  kaig=nil\
+end\
+else\
+  --变白天模式\
+end" ;
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      } ;
+  ["switch"]	= {
+      ["横屏"]	= false ;
+      ["显示状态栏"]	= true ;
+      ["启用启动图"]	= false ;
+      ["支持滑动页面"]	= true ;
+      } ;
+  ["toolbar"]	= {
+      ["输入栏模式"]	= false ;
+      ["menus"]	= {
+          [1]	= {
+              ["onClick"]	= "退出页面()" ;
+              ["name"]	= "退出页面" ;
+              } ;
+          } ;
+      ["启用搜索功能"]	= false ;
+      ["icon_btns"]	= {
+          [1]	= {
+              ["onClick"]	= "--填写id\
+if kaig==nil then\
+  gt=\
+  {--废物幽灵\
+    LinearLayout,\
+    id=\"overla\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  };\
+  toolbarParent.addView(loadlayout{\
+    LinearLayout,\
+    id=\"overlay\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  })\
+  webView.addView(loadlayout(gt))\
+  kaig=0\
+  print(\"夜间模式\")\
+\
+\
+else\
+  webView.removeView(overla)\
+  toolbarParent.removeView(overlay)\
+  kaig=nil\
+  print(\"日间模式\")\
+\
+\
+end" ;
+              ["icon"]	= "brightness_6" ;
+              } ;
+          } ;
+      ["搜索URL"]	= "" ;
+      ["搜索框提示"]	= "输入关键词搜索.." ;
+      } ;
+  ["tab_bar"]	= {
+      ["items"]	= {
+          [2]	= {
+              ["name"]	= "深夜FM" ;
+              ["url"]	= "https://m.lizhi.fm/vod/user/12637445" ;
+              } ;
+          [1]	= {
+              ["name"]	= "直播" ;
+              ["url"]	= "https://m.douyu.com/2550505" ;
+              } ;
+          } ;
+      } ;
+  ["fltBtn"]	= {
+      ["显示"]	= false ;
+      ["点击事件"]	= "刷新网页()--悬浮按钮点击时执行的事件" ;
+      ["图标"]	= "" ;
+      } ;
   ["view_attribute"]	= {
       ["顶栏标题"]	= "标题" ;
-      ["搜索栏阴影强度"]	= "2dp" ;
       ["标签栏高度"]	= "20dp" ;
-      ["侧滑栏宽度"]	= "240dp" ;
-      ["顶栏阴影强度"]	= "2dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
       ["顶栏高度"]	= "40dp" ;
       ["标签栏滑动条高度"]	= "3dp" ;
-      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
       } ;
   ["sidebar"]	= {
       ["启用"]	= false ;
@@ -15,85 +137,13 @@
       ["items"]	= {
           } ;
       } ;
-  ["switch"]	= {
-      ["显示状态栏"]	= true ;
-      ["支持滑动页面"]	= true ;
-      ["横屏"]	= false ;
-      ["启用启动图"]	= false ;
-      } ;
-  ["toolbar"]	= {
-      ["搜索框提示"]	= "输入关键词搜索.." ;
-      ["icon_btns"]	= {
-          } ;
-      ["输入栏模式"]	= false ;
-      ["启用搜索功能"]	= false ;
-      ["搜索URL"]	= "" ;
-      ["menus"]	= {
-          [1]	= {
-              ["name"]	= "退出页面" ;
-              ["onClick"]	= "退出页面()" ;
-              } ;
-          } ;
-      } ;
-  ["fltBtn"]	= {
-      ["图标"]	= "" ;
-      ["显示"]	= false ;
-      ["点击事件"]	= "刷新网页()--悬浮按钮点击时执行的事件" ;
-      } ;
   ["web"]	= {
-      ["网页沉浸"]	= false ;
-      ["浏览器用户标识"]	= "iPhone" ;
       ["惰性加载"]	= true ;
-      ["支持打开外部应用"]	= true ;
-      ["启用长按菜单"]	= true ;
+      ["网页沉浸"]	= false ;
       ["启用进度条"]	= true ;
-      } ;
-  ["tab_bar"]	= {
-      ["items"]	= {
-          [2]	= {
-              ["url"]	= "https://m.lizhi.fm/vod/user/12637445" ;
-              ["name"]	= "深夜FM" ;
-              } ;
-          [1]	= {
-              ["url"]	= "https://m.douyu.com/2550505" ;
-              ["name"]	= "直播" ;
-              } ;
-          } ;
-      } ;
-  ["colors"]	= {
-      ["侧滑栏背景"]	= "#e3ffffff" ;
-      ["侧滑栏列表图标"]	= "#ff757575" ;
-      ["标签栏项目触摸"]	= "#33000000" ;
-      ["搜索栏背景"]	= "#ffffffff" ;
-      ["进度条"]	= "#ff7e593e" ;
-      ["侧滑栏列表文字"]	= "#ff333333" ;
-      ["搜索栏提示文字"]	= "#80000000" ;
-      ["顶栏部件触摸"]	= "#33ffffff" ;
-      ["顶栏部件"]	= "#ffffffff" ;
-      ["搜索栏部件"]	= "#ff888888" ;
-      ["搜索栏部件触摸"]	= "#44000000" ;
-      ["标签栏文本"]	= "#ffffffff" ;
-      ["悬浮按钮"]	= "#ff7e593e" ;
-      ["顶栏"]	= "#ff7e593e" ;
-      ["状态栏"]	= "#ffffffff" ;
-      ["悬浮按钮图标"]	= "#ffffffff" ;
-      ["标签栏滑动条"]	= "#ff7e593e" ;
-      ["导航栏"]	= "#ff2c2e43" ;
-      } ;
-  ["events"]	= {
-      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
-      ["程序启动"]	= "--程序启动时会执行的事件" ;
-      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
-\
---接收参数\
-浏览器对象,新标题=..." ;
-      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
-\
---接收参数\
-浏览器对象,网页链接=..." ;
+      ["启用长按菜单"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["支持打开外部应用"]	= true ;
       } ;
   ["web_control"]	= {
       [2]	= {
@@ -106,5 +156,25 @@
           ["url"]	= "m.douyu.com" ;
           ["js"]	= "document.getElementsByClassName(\"Snackbar \")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"Snackbar-text\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"c-operate\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"c-operate-sub c-operate-input-wrap no-gifticon\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"header\")[0].setAttribute(\"style\",\"display:none\");" ;
           } ;
+      } ;
+  ["colors"]	= {
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["侧滑栏背景"]	= "#e3ffffff" ;
+      ["状态栏"]	= "#ffffffff" ;
+      ["标签栏项目触摸"]	= "#33000000" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      ["顶栏部件触摸"]	= "#33ffffff" ;
+      ["顶栏"]	= "#ffa28cf6" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["标签栏滑动条"]	= "#ffaea2ff" ;
+      ["侧滑栏列表图标"]	= "#ff757575" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["悬浮按钮"]	= "#ff7e593e" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["标签栏文本"]	= "#ffffffff" ;
+      ["进度条"]	= "#ffff5d5d" ;
       } ;
   } ;

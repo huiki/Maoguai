@@ -1,6 +1,7 @@
-appname="毛怪の宝库"
-appver="V2.8"
-appcode="28"
+appname="毛怪助手"
+template="tab"
+appver="V3.6"
+packagename="com.Mayflyapp.Maoguai"
 user_permission={
   [1]	= "ACCESS_COARSE_LOCATION" ;
   [2]	= "ACCESS_FINE_LOCATION" ;
@@ -9,7 +10,4 @@ user_permission={
   [5]	= "INTERNET" ;
   [6]	= "WRITE_EXTERNAL_STORAGE" ;
   } ;
-packagename="com.Mayflyapp.Maoguai"
-template="tab"
-
---require "import" import"loadlayout" import"loadmenu" import"loadbitmap" 
+appcode="36"

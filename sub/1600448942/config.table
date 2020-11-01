@@ -1,0 +1,259 @@
+{
+  ["toolbar"]	= {
+      ["搜索URL"]	= "%s" ;
+      ["输入栏模式"]	= false ;
+      ["menus"]	= {
+          [1]	= {
+              ["name"]	= "退出" ;
+              ["onClick"]	= "退出页面()" ;
+              } ;
+          } ;
+      ["搜索框提示"]	= "" ;
+      ["icon_btns"]	= {
+          [1]	= {
+              ["icon"]	= "brightness_6" ;
+              ["onClick"]	= "--填写id\
+if kaig==nil then\
+  gt=\
+  {--废物幽灵\
+    LinearLayout,\
+    id=\"overla\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  };\
+  toolbarParent.addView(loadlayout{\
+    LinearLayout,\
+    id=\"overlay\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  })\
+  webView.addView(loadlayout(gt))\
+  kaig=0\
+  print(\"夜间模式\")\
+\
+\
+else\
+  webView.removeView(overla)\
+  toolbarParent.removeView(overlay)\
+  kaig=nil\
+  print(\"日间模式\")\
+\
+\
+end" ;
+              } ;
+          } ;
+      ["启用搜索功能"]	= false ;
+      } ;
+  ["sidebar"]	= {
+      ["启用顶部图片"]	= false ;
+      ["启用"]	= true ;
+      ["items"]	= {
+          [1]	= {
+              ["icon"]	= "drawable/apple_mobileme.png" ;
+              ["name"]	= "共享上传" ;
+              ["onClick"]	= "对话框()\
+.设置标题(\"警告\")\
+.设置消息(\"切记上传与憨相关的同人or官方作品，其余作品一律做违规处理，上传时请小心操作，不留神将会误删别人上传的作品\")\
+.设置积极按钮(\"确定\",function()\
+  显示消息(\"点击了确定\")\
+end)\
+.设置消极按钮(\"取消\")\
+.显示()\
+加载网页(\"https://shimo.im/docs/CwgqG8rrCgjwYHvv/\")" ;
+              } ;
+          [2]	= {
+              ["icon"]	= "drawable/format_paint.png" ;
+              ["name"]	= "大咩专用" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/RCqwgjTdc38Pggjh/\")" ;
+              } ;
+          [3]	= {
+              ["icon"]	= "drawable/laptop_windows.png" ;
+              ["name"]	= "电脑壁纸" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/vgrJKYjgRc8tHdR8/\")" ;
+              } ;
+          [4]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第一期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/Cy9XXG9DdG8pKgPr/\")" ;
+              } ;
+          [5]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第二期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/cXpcWCQw83dJJqry/\")" ;
+              } ;
+          [6]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第三期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/hyHgRTpW3RjrcPPp/ \")" ;
+              } ;
+          [7]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第四期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/GprdwtptgRGDGXyV/\")" ;
+              } ;
+          [8]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第五期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/3Tc9w8dYjkxkpkvY/\")" ;
+              } ;
+          [9]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第六期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/Qd3jCrtQxW3PXrkt/\")" ;
+              } ;
+          [10]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第七期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/c3xdGtRttDxYcCt3/ \")" ;
+              } ;
+          [11]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第八期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/hhcJwDyX9HWkHktY/\")" ;
+              } ;
+          [12]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第九期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/X6WKvVGDKpyxHxxq/\")" ;
+              } ;
+          [13]	= {
+              ["icon"]	= "drawable/pill.png" ;
+              ["name"]	= "第十期" ;
+              ["onClick"]	= "加载网页(\"https://shimo.im/docs/CGywwgXj6cXPDJvV/\")" ;
+              } ;
+          } ;
+      } ;
+  ["web_control"]	= {
+      [1]	= {
+          ["js"]	= "document.getElementsByClassName(\"sc-kpOJdX kaYYWJ\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-gPEVay dURSuU\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sm-ad-item pos-mobile-readonly-doc-top-banner ad-2020102100013\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sm-ad-img\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sm-ad-item pos-mobile-readonly-doc-top-banner ad-2020102100013\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sm-tooltip randomClass-mvIob sm-tooltip-theme-blue sm-tooltip-placement-bottom \")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-kGXeez iQvIYb\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"invok-content\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sm-ad-img\")[1].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-cMljjf fwmQAP\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"sc-kGXeez iQvIYb\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"invok-content\")[0].setAttribute(\"style\",\"display:none\");" ;
+          ["remove_element"]	= "" ;
+          ["url"]	= "shimo.im" ;
+          } ;
+      } ;
+  ["colors"]	= {
+      ["顶栏部件"]	= "#ffffffff" ;
+      ["侧滑栏背景"]	= "#ffffffff" ;
+      ["搜索栏部件触摸"]	= "#44000000" ;
+      ["搜索栏提示文字"]	= "#80000000" ;
+      ["导航栏"]	= "#ff2c2e43" ;
+      ["顶栏"]	= "#ffa28cf6" ;
+      ["搜索栏背景"]	= "#ffffffff" ;
+      ["进度条"]	= "#ffaea2ff" ;
+      ["顶栏部件触摸"]	= "#22ffffff" ;
+      ["悬浮按钮"]	= "#ff33a7aa" ;
+      ["悬浮按钮图标"]	= "#ffffffff" ;
+      ["搜索栏部件"]	= "#ff888888" ;
+      ["侧滑栏列表图标"]	= "#ffa28cf6" ;
+      ["侧滑栏列表文字"]	= "#ff333333" ;
+      } ;
+  ["fltBtn"]	= {
+      ["图标"]	= "" ;
+      ["显示"]	= false ;
+      ["点击事件"]	= "--悬浮按钮点击时执行的事件" ;
+      } ;
+  ["events"]	= {
+      ["网页即将加载"]	= "--浏览器即将加载新的网页时执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["程序启动"]	= "--侧滑栏圆角\
+function CircleButton(view,InsideColor,radiu)\
+import \"android.graphics.drawable.GradientDrawable\"\
+drawable = GradientDrawable()\
+drawable.setShape(GradientDrawable.RECTANGLE)\
+drawable.setColor(InsideColor)\
+drawable.setCornerRadii({radiu,radiu,radiu,radiu,radiu,radiu,radiu,radiu});\
+view.setBackgroundDrawable(drawable)\
+end\
+角度=50\
+控件id=sidebar\
+控件颜色=0xFFFFFFFF\
+CircleButton(控件id,控件颜色,角度)\
+flt=sidebar.getLayoutParams( )\
+flt.setMargins(200, 200, 800, 250)\
+sidebar.setLayoutParams(flt)\
+--以上代码是侧滑栏圆角，高度，宽度，和上下边距的代码。\
+--获取页面根布局\
+local lay=drawerLayout.getChildAt(1)\
+--监听侧滑滑动事件\
+local pio=this.getWidth()*0.1\
+drawerLayout.setDrawerListener(DrawerLayout.DrawerListener{onDrawerSlide=function(v,i)\
+lay.setScaleX(1-i/13.5).setScaleY(1-i/12.5)--页面缩放\
+lay.setTranslationX((({0,0,1,0,-1})[v.LayoutParams.gravity])*(i*0.5*pio))--页面位移(其中那段奇怪的表是用于判断位移方向，不过依然仅支持左右侧滑)\
+--sidebar.setScaleX(i).setScaleY(i)--侧滑栏缩放\
+end})\
+\
+\
+function isNightMode()\
+  local configuration = activity.getResources().getConfiguration();\
+  return configuration.uiMode+1==configuration.UI_MODE_NIGHT_YES or configuration.uiMode-1==configuration.UI_MODE_NIGHT_YES or configuration.uiMode==configuration.UI_MODE_NIGHT_YES\
+end\
+if isNightMode() then\
+  --填写id\
+if kaig==nil then\
+  gt=\
+  {--废物幽灵\
+    LinearLayout,\
+    id=\"overla\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  };\
+  toolbarParent.addView(loadlayout{\
+    LinearLayout,\
+    id=\"overlay\",\
+    layout_width=\"fill\",\
+    layout_height=32552732*6,\
+    orientation=\"vertical\",\
+    backgroundColor=\"#86000000\",\
+  })\
+  webView.addView(loadlayout(gt))\
+  kaig=0\
+\
+\
+else\
+  webView.removeView(overla)\
+  toolbarParent.removeView(overlay)\
+  kaig=nil\
+end\
+else\
+  --变白天模式\
+end\
+" ;
+      ["网页加载完毕"]	= "--网页加载完毕后执行的事件\
+\
+--接收参数\
+浏览器对象,网页链接=..." ;
+      ["收到新标题"]	= "--浏览器加载新页面并获得新标题时执行的事件\
+\
+--接收参数\
+浏览器对象，新标题=..." ;
+      } ;
+  ["web"]	= {
+      ["支持打开外部应用"]	= false ;
+      ["启用长按菜单"]	= true ;
+      ["浏览器用户标识"]	= "默认" ;
+      ["启动网页"]	= "https://shimo.im/docs/RCqwgjTdc38Pggjh/" ;
+      ["启用进度条"]	= true ;
+      ["网页沉浸"]	= false ;
+      } ;
+  ["view_attribute"]	= {
+      ["顶栏高度"]	= "56dp" ;
+      ["搜索栏阴影强度"]	= "2dp" ;
+      ["侧滑栏宽度"]	= "240dp" ;
+      ["顶栏阴影强度"]	= "2dp" ;
+      ["搜索栏圆角弧度"]	= "2dp" ;
+      ["顶栏标题"]	= "官方/同人作" ;
+      } ;
+  ["switch"]	= {
+      ["显示状态栏"]	= true ;
+      ["启用启动图"]	= false ;
+      ["支持滑动页面"]	= false ;
+      ["横屏"]	= false ;
+      } ;
+  } ;
