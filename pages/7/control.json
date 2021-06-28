@@ -1,0 +1,1 @@
+[{"host":"www.bilibili.com","removes":"DIV.h5-download-left,DIV.h5-download-bar clearfix","script":"document.getElementsByClassName(\"h5-download-bar clearfix\")[0].setAttribute(\"style\",\"display:none\");document.getElementsByClassName(\"h5-download-left\")[0].setAttribute(\"style\",\"display:none\");"}]
