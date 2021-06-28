@@ -1,1 +1,0 @@
-[{"host":"m.weibo.cn","removes":"div.m-top-bar","script":"document.getElementsByClassName(\"m-top-bar\")[0].setAttribute(\"style\",\"display:none\");"}]
